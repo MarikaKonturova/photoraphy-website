@@ -1,0 +1,78 @@
+.hero {
+  min-height: 90vh;
+  width: 95%;
+  margin: 0 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.hero_introduction {
+  flex: 2 1 40rem;
+  text-align: center;
+}
+.hero_introduction p {
+  padding: 5rem 10rem;
+  color: var(--gray-text);
+}
+.hero_introduction h2 {
+  padding: 3rem 0;
+}
+.hero_introduction a {
+  padding: 2rem 10rem;
+  border: 3px solid black;
+  margin-bottom: 4rem;
+}
+.hero_images {
+  flex: 1 1 40rem;
+  background: linear-gradient(#dad8dd, #dad1d4);
+  position: relative;
+  z-index: 1;
+}
+#hero_elena {
+  width: 100%;
+  height: 100%;
+  /* to make object img solid */
+  object-fit: cover;
+}
+.plant {
+  max-height: 80%;
+  position: absolute;
+  bottom: 0%;
+  left: -15%;
+  z-index: -1;
+  transform: translateY(10%) rotateZ(-10deg) rotateX(-90deg);
+  /* to animate plant after animation opening */
+  /* alternate-reverse forward and back smoothly */
+  animation: plant-entrance 1.5s ease-in-out 0.5s forwards,
+    plant-shake 2.5s infinite ease-in-out alternate-reverse 2s;
+  transform-origin: bottom;
+}
+.plant2 {
+  left: 50%;
+}
+@keyframes plant-entrance {
+  from {
+    transform: translateY(10%) rotateZ(-10deg) rotateX(-90deg);
+  }
+  to {
+    transform: translateY(0%) rotateZ(0deg) rotateX(0deg);
+  }
+}
+
+@keyframes plant-shake {
+  from {
+    transform: rotateZ(-5deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+@media screen and (max-width: 842px) {
+  .hero {
+    width: 100%;
+  }
+  .hero_introduction p {
+    padding: 5rem 3rem;
+  }
+}

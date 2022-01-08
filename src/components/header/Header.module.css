@@ -1,0 +1,74 @@
+.header {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  /* because of the box-shadow we need not only z-index, but relative position as well */
+  z-index: 99;
+  width: 100%;
+  position: relative;
+}
+nav {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
+  padding: 2rem 0;
+}
+#logo {
+  flex: 1 1 20rem;
+}
+.nav_links {
+  display: flex;
+  justify-content: space-around;
+  flex: 1 1 20rem;
+}
+
+@media screen and (max-width: 824px) {
+  .nav_links {
+    background: var(--background-color);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.7s ease-in-out;
+  }
+  .nav_links_left {
+    left: 0%;
+  }
+  .nav_links a {
+    color: white;
+    font-size: var (--header3);
+    text-decoration: underline;
+  }
+  .burger span {
+    padding: 0.2rem 2rem;
+    background: var(--gray-text);
+    margin: 0.5rem 0;
+    display: block;
+  }
+  .close {
+    z-index: 99;
+    position: absolute;
+    right: 6vw;
+    top: calc(5vh+1rem);
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+  .close:before,
+  .close:after {
+    position: absolute;
+    left: 1.5rem;
+    content: " ";
+    height: 3.3rem;
+    width: 0.2rem;
+    background-color: whitesmoke;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+}

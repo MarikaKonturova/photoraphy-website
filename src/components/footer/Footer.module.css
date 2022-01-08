@@ -1,0 +1,18 @@
+.footer {
+  background: var(--background-color);
+  color: white;
+  display: flex;
+  padding: 3rem 5%;
+  align-items: center;
+}
+.footer ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: flex-end;
+  column-gap: 4%;
+  align-items: center;
+}
+.footer h4 {
+  flex: 3 1 40rem;
+  font-size: calc(1.4rem + 1vw);
+}

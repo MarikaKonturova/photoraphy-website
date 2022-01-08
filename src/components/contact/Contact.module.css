@@ -1,0 +1,41 @@
+.contact {
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form_wrapper {
+  flex: 3 1 40rem;
+}
+.form_wrapper h2 {
+  margin: 5rem 0;
+}
+.form_wrapper span {
+  font-size: var(--big);
+  color: var(--special-color);
+}
+.form_wrapper label {
+  display: block;
+}
+.form_wrapper input {
+  display: block;
+  margin: 3rem 0;
+  background: var(--background-color);
+  color: white;
+  border: none;
+  padding: 1rem;
+}
+.form_wrapper button {
+  padding: 1rem 8rem;
+  background: var(--special-color);
+  color: white;
+  border: none;
+  width: 100%;
+}
+.contact img {
+  flex: 1 1 40rem;
+}
+@media screen and (max-width: 1050px) {
+  .contact img {
+    display: none;
+  }
+}
